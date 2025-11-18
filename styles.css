@@ -1,0 +1,437 @@
+/* ===========================
+   Kolory bazowe i setup
+   =========================== */
+
+:root{
+  --bg-main: #050608;        /* główne tło strony */
+  --bg-card: #0b0f15;        /* tło sekcji/kart */
+  --text-main: #f5f5f5;      /* podstawowy kolor tekstu */
+  --text-muted: #9ca3af;     /* delikatny, przygaszony tekst */
+  --accent-neon: #00ff66;    /* neonowa zieleń (matrix) */
+  --accent-gold: #d4af37;    /* złoty akcent */
+  --border-soft: #111827;    /* delikatne obramowania */
+}
+
+/* Reset marginesów, podstawowy font */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #111827 0, #020308 55%, #000000 100%);
+  color: var(--text-main);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Kontener główny w środku ekranu */
+.page-wrap{
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 16px 16px 32px;
+}
+
+/* ===========================
+   Top bar / logo
+   =========================== */
+
+.top-bar{
+  display: flex;
+  flex-direction: column;      /* logo nad menu */
+  align-items: center;
+  justify-content: center;     /* wyśrodkowanie */
+  gap: 14px;                   /* odstęp między logo a navem */
+  padding: 8px 4px 16px;
+}
+
+/* Logo tekstowe SMUG */
+.top-bar__logo{
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: center;         /* środek */
+  text-align: center;
+}
+
+.logo-word{
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-neon);
+}
+
+.logo-sub{
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* Prosta nawigacja */
+.top-bar__nav{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.8rem;
+  justify-content: center;     /* wyśrodkowanie nav */
+}
+
+.top-bar__nav a{
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  padding: 4px 6px;
+  border-radius: 999px;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.top-bar__nav a:hover{
+  color: var(--accent-neon);
+  background: rgba(15, 118, 110, 0.12);
+}
+
+/* ===========================
+   Hero
+   =========================== */
+
+.hero{
+  padding: 24px 0 16px;
+}
+
+.hero__content{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;     /* pełne wyśrodkowanie */
+  gap: 24px;
+  text-align: center;          /* środkowanie tekstów */
+}
+
+/* Obraz monety */
+.hero__image{
+  flex: 1 1 260px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero__image img{
+  max-width: 280px;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 24px rgba(0, 255, 102, 0.4));
+}
+
+/* Teksty hero */
+.hero__text{
+  flex: 1 1 280px;
+}
+
+.hero__text h1{
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.hero__tagline{
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  max-width: 34rem;
+  margin-inline: auto;         /* ładne wyśrodkowanie bloku tekstu */
+}
+
+.hero__tagline--small{
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.hero__cta{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 8px;
+  justify-content: center;      /* przyciski w środku */
+}
+
+/* ===========================
+   Przyciski
+   =========================== */
+
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background 0.2s ease, color 0.2s ease, border 0.2s ease,
+              transform 0.1s ease;
+}
+
+.btn--primary{
+  background: linear-gradient(135deg, var(--accent-neon), #6ee7b7);
+  color: #020617;
+  font-weight: 600;
+}
+
+.btn--primary:hover{
+  transform: translateY(-1px);
+}
+
+.btn--ghost{
+  background: transparent;
+  border-color: var(--accent-neon);
+  color: var(--accent-neon);
+}
+
+.btn--ghost:hover{
+  background: rgba(16, 185, 129, 0.08);
+}
+
+/* ===========================
+   Sekcje
+   =========================== */
+
+.section{
+  margin-top: 28px;
+  padding: 20px 18px;
+  border-radius: 18px;
+  border: 1px solid var(--border-soft);
+  background: radial-gradient(circle at top left, rgba(0, 255, 102, 0.06) 0, rgba(15, 23, 42, 0.98) 40%, #020617 100%);
+  text-align: center;          /* nagłówki i akapity na środku */
+}
+
+/* Wariant karty – bardziej jednolite tło */
+.section--card{
+  background: radial-gradient(circle at top, rgba(0, 255, 102, 0.05) 0, #020617 40%, #020617 100%);
+}
+
+/* Grid 2-kolumnowy (desktop) */
+.section--grid{
+  display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+  gap: 20px;
+  text-align: center;          /* tytuły i akapity na środku */
+}
+
+/* Bloki wewnątrz sekcji grid */
+.section__block h2{
+  margin-bottom: 8px;
+}
+
+/* Tytuły sekcji */
+.section h2{
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* ===========================
+   Listy punktowane
+   =========================== */
+
+.bullet-list{
+  list-style: none;
+  margin-top: 6px;
+  max-width: 34rem;
+  margin-inline: auto;         /* sama lista wyśrodkowana jako blok */
+}
+
+.bullet-list li{
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 6px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  text-align: left;            /* tekst w li wyrównany do lewej dla czytelności */
+}
+
+.bullet-list li::before{
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent-neon);
+}
+
+/* Mała notka */
+.note{
+  margin-top: 12px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* ===========================
+   Roadmap
+   =========================== */
+
+.roadmap{
+  display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.roadmap__item{
+  padding: 10px 10px 12px;
+  border-radius: 14px;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+.roadmap__item h3{
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+  color: var(--accent-gold);
+}
+
+.roadmap__item p{
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* ===========================
+   Community / social
+   =========================== */
+
+.social-buttons{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 12px 0;
+  justify-content: center;      /* przyciski w środku */
+}
+
+.disclaimer{
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ===========================
+   Stopka
+   =========================== */
+
+.footer{
+  margin-top: 32px;
+  padding: 16px 8px 0;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: center;
+  border-top: 1px solid rgba(15, 23, 42, 0.9);
+}
+
+/* ===========================
+   RWD – telefony
+   =========================== */
+
+@media (max-width: 768px){
+  .page-wrap{
+    padding-inline: 12px;
+  }
+
+  .hero__content{
+    flex-direction: column;
+  }
+
+  .section--grid,
+  .roadmap{
+    grid-template-columns: minmax(0,1fr);
+  }
+  
+  
+  /* ===========================
+   Language switch PL/EN
+   =========================== */
+.lang-switch {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+}
+
+.lang-switch a {
+  text-decoration: none;
+  color: var(--accent-neon);
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.lang-switch span {
+  color: var(--text-muted);
+}
+
+.lang-switch a:hover {
+  background: rgba(0, 255, 102, 0.07);
+}
+
+.lang-switch .active {
+  background: rgba(0, 255, 102, 0.15);
+  color: var(--accent-neon);
+}
+  
+  /* ===========================
+   CTA CARD — niezależne, zawsze Na środku
+   =========================== */
+
+.cta-card{
+  width: 100%;
+  max-width: 420px;
+  margin: 40px auto;        /* środek na każdej rozdzielczości */
+  padding: 20px 24px;
+  background: rgba(0,255,102,0.06);
+  border: 1px solid rgba(0,255,102,0.25);
+  border-radius: 14px;
+  text-align: center;       /* ważne */
+  box-shadow: 0 0 20px rgba(0,255,102,0.1);
+}
+
+.cta-card__title{
+  font-size: 1rem;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+.cta-card__button{
+  display: inline-block;
+  padding: 10px 22px;
+  background: linear-gradient(135deg, #00ff66, #66ffcc);
+  color: #011;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 999px;
+  letter-spacing: 0.12em;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.cta-card__button:hover{
+  filter: brightness(1.1);
+}
+
+.cta-card__note{
+  font-size: 0.75rem;
+  color: #8ddaaf;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.8;
+}
+  
+
+}

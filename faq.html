@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SMUG – FAQ</title>
+<link rel="stylesheet" href="styles.css" />
+
+<style>
+  .faq-page{
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+  }
+
+  .faq-title{
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--accent-neon);
+  }
+
+  .lang-switch{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .lang-btn{
+    display: inline-block;
+    margin: 0 6px;
+    padding: 8px 16px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,255,102,0.4);
+    background: rgba(0,255,102,0.08);
+    color: var(--accent-neon);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.25s;
+    cursor: pointer;
+  }
+
+  .lang-btn:hover{
+    background: rgba(0,255,102,0.18);
+    box-shadow: 0 0 10px rgba(0,255,102,0.6);
+  }
+
+  /* Hidden blocks */
+  .hidden{
+    display: none;
+  }
+
+  /* Back button */
+  .back-btn{
+    display: inline-block;
+    margin: 30px auto;
+    padding: 10px 22px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,255,102,0.4);
+    background: rgba(0,255,102,0.08);
+    color: var(--accent-neon);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: 0.25s;
+  }
+
+  .back-btn:hover{
+    background: rgba(0,255,102,0.18);
+    box-shadow: 0 0 10px rgba(0,255,102,0.6);
+  }
+</style>
+
+</head>
+
+<body>
+
+<section id="faq" class="section section--card faq-page">
+
+  <h2 class="faq-title">FAQ – Najczęściej zadawane pytania</h2>
+
+  <!-- LANGUAGE SWITCH -->
+  <div class="lang-switch">
+    <button class="lang-btn" onclick="showPL()">PL</button>
+    <button class="lang-btn" onclick="showEN()">EN</button>
+  </div>
+
+  <!-- =======================
+       FAQ – POLSKA WERSJA
+       ======================= -->
+  <div id="faq-pl">
+
+    <div class="faq">
+      <div class="faq-item">
+        <h3>1. Czym jest SMUG?</h3>
+        <p>
+          SMUG to społecznościowy token powiązany z projektem StreetMug — ruchem
+          zrodzonym z realnego życia, ulicy i prawdziwych historii. Nie hype, tylko
+          autentyczność. Budujemy własną legendę krok po kroku, we własnym tempie.
+          Z planem, wizją, konsekwencją i determinacją, z prawdziwym uśmiechem i
+          pozytywnym nastawieniem do ludzi. Idziemy z duchem czasu, wspierając się 
+          nawzajem. Jesteśmy ludźmi z krwi i kości, wierni swoim zasadom. Kierunek: kosmos.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>2. Czy SMUG obiecuje profity?</h3>
+        <p>
+          Nie. SMUG nie jest obietnicą zarobku. To narzędzie społeczności, projekt
+          artystyczno–technologiczny i forma wsparcia twórców żyjących w trudnej 
+          sytuacji życiowej. Chcemy stać się realnym wsparciem dla osób wykluczonych 
+          społecznie.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>3. Dlaczego powstał ten projekt?</h3>
+        <p>
+          Bo najcenniejsze historie rodzą się tam, gdzie nikt nie zagląda. StreetMug 
+          i SMUG to odpowiedź na samotność, kryzys, wykluczenie — i potrzebę stworzenia
+          czegoś wartościowego dla ludzi, od ludzi.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>4. Czym SMUG różni się od innych memecoinów?</h3>
+        <p>
+          Nie jest żartem. Nie powstał z nudów. SMUG ma fundament w życiu, nie w marketingu.
+          Jesteśmy w 100% oryginalni w wizji. Wdzięczni za to co mamy.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>5. Czy mogę dołączyć bez inwestowania?</h3>
+        <p>
+          Tak. Tworzymy otwartą przestrzeń — follow, rozmowa, kreatywność, wsparcie.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>6. Czy SMUG ma utility?</h3>
+        <p>
+          SMUG jest częścią filozofii StreetMug — narzędziem dla twórców i „muggers”.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>7. Co stoi za projektem?</h3>
+        <p>
+          Jedna osoba odbijająca się od dna + nowoczesna warstwa AI jako narzędzie.
+          100% szczerości, 100% transparentności.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>8. Czy SMUG jest bezpieczny?</h3>
+        <p>
+          Token powstanie tylko przy realnej potrzebie i sile community.  
+          Zero presji. Zero FOMO. Zero ściemy.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- =======================
+       FAQ – ENGLISH VERSION
+       ======================= -->
+  <div id="faq-en" class="hidden">
+
+    <div class="faq">
+
+      <div class="faq-item">
+        <h3>1. What is SMUG?</h3>
+        <p>
+          SMUG is a community-driven token tied to the StreetMug project — a movement 
+          born from real life, the street, and authentic human stories. No hype. No noise.
+          Just truth and direction. We build our legend step by step, in our own rhythm.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>2. Does SMUG promise profits?</h3>
+        <p>
+          No. SMUG is not a financial promise.  
+          It’s a community tool and artistic–technological project supporting people 
+          in difficult life situations.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>3. Why was this project created?</h3>
+        <p>
+          Because the most valuable stories are born where no one looks.
+          StreetMug and SMUG are answers to loneliness, crisis, exclusion —
+          and the need to build something meaningful for people, by people.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>4. How is SMUG different from other memecoins?</h3>
+        <p>
+          It’s not a joke. It wasn’t built from boredom.
+          SMUG is underground — rooted in real life, not marketing fluff.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>5. Can I join without investing?</h3>
+        <p>
+          Yes. Following, sharing, connecting, creating — all of it is part of the movement.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>6. Does SMUG have utility?</h3>
+        <p>
+          SMUG is part of the StreetMug philosophy — a tool for creators and “muggers”.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>7. Who is behind the project?</h3>
+        <p>
+          One person rising from rock bottom + a modern AI layer used as a tool.
+          Brutally honest. 100% transparent.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>8. Is SMUG safe?</h3>
+        <p>
+          The token will be created only when there is real community demand.
+          No pressure. No FOMO. No manipulation.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- RETURN BUTTON -->
+  <div style="text-align:center; margin-top:30px;">
+    <a href="index-pl.html" class="back-btn">Powrót / Back to Main Page</a>
+  </div>
+
+</section>
+
+<script>
+  function showPL(){
+    document.getElementById("faq-pl").classList.remove("hidden");
+    document.getElementById("faq-en").classList.add("hidden");
+  }
+
+  function showEN(){
+    document.getElementById("faq-pl").classList.add("hidden");
+    document.getElementById("faq-en").classList.remove("hidden");
+  }
+</script>
+
+</body>
+</html>
